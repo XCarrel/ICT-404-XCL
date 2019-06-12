@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+// Pizza avec fichier
+// XCL
+// Il y a bien longtemps
 
 namespace Pizza_Fichier
 {
@@ -38,8 +41,10 @@ namespace Pizza_Fichier
                 return;
             }
 
-            // Construction du nom de fichier
-            NomF = "Table " + txtTable.Text.ToString() + ".txt";
+            // Construction du nom de fichier par concaténation
+            NomF = "Table " + txtTable.Text + ".txt";
+            // on aurait aussi pu faire par interpolation:
+            // NomF = String.Format("Table {0}.txt", txtTable.Text);
             
             // Ouverture du fichier
             Fich = new StreamWriter (txtRépertoire.Text + "\\" + NomF);
