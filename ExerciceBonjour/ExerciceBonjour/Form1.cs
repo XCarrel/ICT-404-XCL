@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace ExerciceBonjour
 {
-    public partial class Form1 : Form
+    public partial class Formulaire : Form
     {
-        public Form1()
+        public Formulaire()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblError.Text = "Bonjour";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmdError_Click(object sender, EventArgs e)
+        {
+            lblError.Visible = true;
+            MessageBox.Show("ERREUR","Toto");
         }
     }
 }
